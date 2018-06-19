@@ -14,7 +14,7 @@ public class Main extends Application {
         primaryStage.setTitle("Project");
         primaryStage.setScene(new Scene(root, 400, 275));
         primaryStage.show();
-        //
+        //hi man
     }
 
 
