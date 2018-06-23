@@ -66,35 +66,25 @@ public class Controller {
         }
 
     }
-    FileChooser fileChooser = new FileChooser();
-    File selectedFile;
+
     @FXML
     void load_file(ActionEvent event) {
-
+        FileChooser fileChooser = new FileChooser();
 
         fileChooser.setTitle("Load file");
         fileChooser.setInitialDirectory(new File("./images/"));
 
-        selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
+        File selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
         TextHandler test;
 
         if(selectedFile != null){
-           /* text.setText("");
+            text.setText("");
             test = new TextHandler(selectedFile.getAbsoluteFile().toString());
-            text.setText(test.printText());*/
+            text.setText(test.printText());
             image.setImage(new Image(selectedFile.toURI().toString()));
         }else{
             System.out.println("Image not loaded!");
         }
-    }
-    @FXML
-    void get_text (){
-
-
-        TextHandler test;
-        text.setText("");
-        test = new TextHandler(selectedFile.getAbsoluteFile().toString());
-        text.setText(test.printText());
     }
 }
 
