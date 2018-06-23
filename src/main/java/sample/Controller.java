@@ -43,10 +43,10 @@ public class Controller {
 
     @FXML
     public void initialize() {
-        /*Image saveIcon = new Image("file:icon/eng.png");
-        ImageView saveView = new ImageView(saveIcon);*/
+        Image saveIcon = new Image("file:icon/eng.png");
+        ImageView saveView = new ImageView(saveIcon);
         getText.setVisible(false);
-        //language.setGraphic(saveView);
+        language.setGraphic(saveView);
     }
     @FXML
     void save_text(ActionEvent event) {
