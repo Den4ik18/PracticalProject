@@ -2,6 +2,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -38,8 +39,14 @@ public class Controller {
     private Button getText;
 
     @FXML
+    private MenuButton language;
+
+    @FXML
     public void initialize() {
+        /*Image saveIcon = new Image("file:icon/eng.png");
+        ImageView saveView = new ImageView(saveIcon);*/
         getText.setVisible(false);
+        //language.setGraphic(saveView);
     }
     @FXML
     void save_text(ActionEvent event) {
