@@ -34,8 +34,13 @@ public class Controller {
     @FXML
     private Button saveText;
 
+    @FXML
+    private Button getText;
 
-
+    @FXML
+    public void initialize() {
+        getText.setVisible(false);
+    }
     @FXML
     void save_text(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
@@ -66,25 +71,36 @@ public class Controller {
         }
 
     }
-
+    FileChooser fileChooser = new FileChooser();
+    File selectedFile;
     @FXML
     void load_file(ActionEvent event) {
-        FileChooser fileChooser = new FileChooser();
+
 
         fileChooser.setTitle("Load file");
         fileChooser.setInitialDirectory(new File("./images/"));
 
-        File selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
+        selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
         TextHandler test;
 
         if(selectedFile != null){
-            text.setText("");
-            test = new TextHandler(selectedFile.getAbsoluteFile().toString());
-            text.setText(test.printText());
+
             image.setImage(new Image(selectedFile.toURI().toString()));
+            getText.setVisible(true);
         }else{
             System.out.println("Image not loaded!");
+            getText.setVisible(false);
+
         }
+    }
+    @FXML
+    void get_text (){
+
+
+        TextHandler test;
+        text.setText("");
+        test = new TextHandler(selectedFile.getAbsoluteFile().toString());
+        text.setText(test.printText());
     }
 }
 
