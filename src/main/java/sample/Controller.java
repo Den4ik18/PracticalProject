@@ -1,5 +1,6 @@
 package sample;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
@@ -14,7 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import javafx.scene.control.MenuItem;
 import java.io.File;
 
 public class Controller {
@@ -37,16 +38,32 @@ public class Controller {
 
     @FXML
     private Button getText;
+    Image saveIcon = new Image("file:icon/world.png");
+    ImageView saveView = new ImageView(saveIcon);
 
+    ImageView imageViewUkr = new ImageView(new Image("file:icon/ukr.png"));
+    ImageView imageViewEN = new ImageView(new Image("file:icon/eng.png"));
+    ImageView imageViewRus = new ImageView(new Image("file:icon/rus.png"));
+
+    MenuItem menuItemUkr = new MenuItem("Ukraine", imageViewUkr);
+    MenuItem menuItemEN = new MenuItem("English", imageViewEN);
+    MenuItem menuItemRus = new MenuItem("Russia", imageViewRus);
     @FXML
     private MenuButton language;
-
+    String lang;
     @FXML
     public void initialize() {
-        Image saveIcon = new Image("file:icon/eng.png");
-        ImageView saveView = new ImageView(saveIcon);
+
         getText.setVisible(false);
         language.setGraphic(saveView);
+        language.getItems().add(menuItemUkr);
+        language.getItems().add(menuItemEN);
+        language.getItems().add(menuItemRus);
+    }
+    @FXML
+    public void selctLanguage (){
+        //menuItemEN.
+
     }
     @FXML
     void save_text(ActionEvent event) {
