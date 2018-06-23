@@ -31,7 +31,7 @@
                <children>
                   <ImageView fx:id="image" fitHeight="296.0" fitWidth="368.0" layoutX="4.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
                   <Button fx:id="loadFile" layoutX="103.0" layoutY="14.0" mnemonicParsing="false" onAction="#load_file" prefHeight="25.0" prefWidth="103.0" text="Load file" />
-                  <MenuButton fx:id="language" layoutX="216.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" text="Language" />
+                  <MenuButton fx:id="language" layoutX="216.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#selctLanguage" prefHeight="31.0" prefWidth="114.0" text="Language" />
                </children>
             </Pane>
          </children>

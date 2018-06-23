@@ -16,10 +16,11 @@ public class TextHandler {
 
     private final String output;
 
-    public TextHandler(String input) {
+    public TextHandler(String input,String language) {
         instance = new tesseract.TessBaseAPI();
+        System.out.println(language);
          //Magic
-        initTessDataTrainingPath("src/main/java/sample","eng");//English
+        initTessDataTrainingPath("src/main/java/sample",language);//English
 
 
         image = lept.pixRead(input);

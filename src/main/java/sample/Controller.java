@@ -2,8 +2,9 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -15,7 +16,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.scene.control.MenuItem;
 import java.io.File;
 
 public class Controller {
@@ -45,12 +45,18 @@ public class Controller {
     ImageView imageViewEN = new ImageView(new Image("file:icon/eng.png"));
     ImageView imageViewRus = new ImageView(new Image("file:icon/rus.png"));
 
+    ImageView imageViewUkr1 = new ImageView(new Image("file:icon/ukr.png"));
+    ImageView imageViewEN1 = new ImageView(new Image("file:icon/eng.png"));
+    ImageView imageViewRus1 = new ImageView(new Image("file:icon/rus.png"));
+
     MenuItem menuItemUkr = new MenuItem("Ukraine", imageViewUkr);
     MenuItem menuItemEN = new MenuItem("English", imageViewEN);
     MenuItem menuItemRus = new MenuItem("Russia", imageViewRus);
     @FXML
     private MenuButton language;
-    String lang;
+    private String languageName="eng";
+
+
     @FXML
     public void initialize() {
 
@@ -59,10 +65,43 @@ public class Controller {
         language.getItems().add(menuItemUkr);
         language.getItems().add(menuItemEN);
         language.getItems().add(menuItemRus);
+
     }
     @FXML
-    public void selctLanguage (){
-        //menuItemEN.
+   void selctLanguage (){
+
+        menuItemUkr.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                language.setGraphic(imageViewUkr1);
+                languageName="ukr";
+
+                language.setText("Ukraine");
+            }
+        });
+
+        menuItemEN.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                language.setGraphic(imageViewEN1);
+                languageName="eng";
+
+                language.setText("English");
+            }
+        });
+
+        menuItemRus.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                language.setGraphic(imageViewRus1);
+                languageName="rus";
+
+                language.setText("Russia");
+            }
+
+        });
+
+
 
     }
     @FXML
@@ -123,7 +162,7 @@ public class Controller {
 
         TextHandler test;
         text.setText("");
-        test = new TextHandler(selectedFile.getAbsoluteFile().toString());
+        test = new TextHandler(selectedFile.getAbsoluteFile().toString(),languageName);
         text.setText(test.printText());
     }
 }
