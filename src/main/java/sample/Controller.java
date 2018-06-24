@@ -1,4 +1,6 @@
 package sample;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -165,5 +167,7 @@ public class Controller {
         test = new TextHandler(selectedFile.getAbsoluteFile().toString(),languageName);
         text.setText(test.printText());
     }
+
+
 }
 

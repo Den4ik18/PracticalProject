@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 700, 355));
         primaryStage.getIcons().add(new Image("file:icon/main.png"));
         primaryStage.show();
+
 
     }
 
