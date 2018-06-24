@@ -41,12 +41,12 @@ public class Controller {
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.setInitialDirectory(new File("./text/"));
-        //Set extension filter
+
         FileChooser.ExtensionFilter extFilter =
                 new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
         fileChooser.getExtensionFilters().add(extFilter);
 
-        //Show save file dialog
+
         File file = fileChooser.showSaveDialog(box.getScene().getWindow());
 
         if(file != null){
