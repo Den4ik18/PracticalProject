@@ -19,9 +19,8 @@ public class TextHandler {
     public TextHandler(String input,String language) {
         instance = new tesseract.TessBaseAPI();
         System.out.println(language);
-         //Magic
-        initTessDataTrainingPath("src/main/java/sample",language);//English
 
+        initTessDataTrainingPath("src/main/java/sample",language);
 
         image = lept.pixRead(input);
 
@@ -37,7 +36,6 @@ public class TextHandler {
     }
 
     public String printText(){
-//        System.out.println("Text from image is: \n" + output);
         return output;
     }
 }

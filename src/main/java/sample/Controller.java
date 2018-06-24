@@ -75,7 +75,6 @@ public class Controller {
             public void handle(ActionEvent event) {
                 language.setGraphic(imageViewUkr1);
                 languageName="ukr";
-
                 language.setText("Ukraine");
             }
         });
@@ -85,7 +84,6 @@ public class Controller {
             public void handle(ActionEvent event) {
                 language.setGraphic(imageViewEN1);
                 languageName="eng";
-
                 language.setText("English");
             }
         });
@@ -95,7 +93,6 @@ public class Controller {
             public void handle(ActionEvent event) {
                 language.setGraphic(imageViewRus1);
                 languageName="rus";
-
                 language.setText("Russia");
             }
 
@@ -138,8 +135,6 @@ public class Controller {
     File selectedFile;
     @FXML
     void load_file(ActionEvent event) {
-
-
         fileChooser.setTitle("Load file");
         fileChooser.setInitialDirectory(new File("./images/"));
 
@@ -158,8 +153,6 @@ public class Controller {
     }
     @FXML
     void get_text (){
-
-
         TextHandler test;
         text.setText("");
         test = new TextHandler(selectedFile.getAbsoluteFile().toString(),languageName);
