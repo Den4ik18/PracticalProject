@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
         primaryStage.setTitle("Project");
         primaryStage.setScene(new Scene(root, 693, 355));
-        primaryStage.getIcons().add(new Image("file:icon/main.png"));
+        primaryStage.getIcons().add(new Image("icon/main.png"));
         primaryStage.show();
 
     }

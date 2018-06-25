@@ -72,7 +72,7 @@ public class Controller {
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.setTitle("Load file");
-        fileChooser.setInitialDirectory(new File("./images/"));
+        fileChooser.setInitialDirectory(new File("./"));
 
         File selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
         TextHandler test;

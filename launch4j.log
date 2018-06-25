@@ -1,0 +1,17 @@
+
+
+Version:	3.12
+CmdLine:	D:\Java\Project\PracticalProject\OCR.exe --l4j-debug
+WOW64:		yes
+Create mutex:	OCR
+Working dir:	D:\Java\Project\PracticalProject\.
+Java min ver:	
+Java max ver:	
+Bundled JRE:	C:\Program Files\Java\jre-9.0.1\
+Check launcher:	C:\Program Files\Java\jre-9.0.1\bin\javaw.exe (OK)
+Main class:	sample.Main
+Info:		Classpath not defined.
+Launcher:	C:\Program Files\Java\jre-9.0.1\bin\javaw.exe
+Launcher args:	-classpath "D:\Java\Project\PracticalProject\OCR.exe" sample.Main
+Args length:	65/32768 chars
+Exit code:	0
