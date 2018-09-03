@@ -40,16 +40,16 @@ public class Controller {
 
     @FXML
     private Button getText;
-    Image saveIcon = new Image("file:icon/world.png");
+    Image saveIcon = new Image("icon/world.png");
     ImageView saveView = new ImageView(saveIcon);
 
-    ImageView imageViewUkr = new ImageView(new Image("file:icon/ukr.png"));
-    ImageView imageViewEN = new ImageView(new Image("file:icon/eng.png"));
-    ImageView imageViewRus = new ImageView(new Image("file:icon/rus.png"));
+    ImageView imageViewUkr = new ImageView(new Image("icon/ukr.png"));
+    ImageView imageViewEN = new ImageView(new Image("icon/eng.png"));
+    ImageView imageViewRus = new ImageView(new Image("icon/rus.png"));
 
-    ImageView imageViewUkr1 = new ImageView(new Image("file:icon/ukr.png"));
-    ImageView imageViewEN1 = new ImageView(new Image("file:icon/eng.png"));
-    ImageView imageViewRus1 = new ImageView(new Image("file:icon/rus.png"));
+    ImageView imageViewUkr1 = new ImageView(new Image("icon/ukr.png"));
+    ImageView imageViewEN1 = new ImageView(new Image("icon/eng.png"));
+    ImageView imageViewRus1 = new ImageView(new Image("icon/rus.png"));
 
     MenuItem menuItemUkr = new MenuItem("Ukraine", imageViewUkr);
     MenuItem menuItemEN = new MenuItem("English", imageViewEN);
@@ -138,7 +138,7 @@ public class Controller {
     @FXML
     void load_file(ActionEvent event) {
         fileChooser.setTitle("Load file");
-        fileChooser.setInitialDirectory(new File("./images/"));
+        fileChooser.setInitialDirectory(new File("./"));
 
         selectedFile = fileChooser.showOpenDialog(box.getScene().getWindow());
         TextHandler test;

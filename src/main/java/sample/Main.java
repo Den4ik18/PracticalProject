@@ -13,9 +13,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
-        primaryStage.setTitle("Project");
+        primaryStage.setTitle("Optical character recognition");
         primaryStage.setScene(new Scene(root, 700, 355));
-        primaryStage.getIcons().add(new Image("file:icon/main.png"));
+        primaryStage.getIcons().add(new Image("icon/main.png"));
         primaryStage.show();
 
 
