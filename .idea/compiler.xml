@@ -25,7 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="PracticalProject" options="--add-modules=javafx.graphics,javafx.fxml,javafx.base,javafx.controls" />
+      <module name="PracticalProject" options="--add-modules=javafx.graphics,javafx.fxml,javafx.controls,javafx.base" />
     </option>
   </component>
 </project>

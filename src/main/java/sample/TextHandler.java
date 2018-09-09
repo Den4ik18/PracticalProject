@@ -20,7 +20,7 @@ public class TextHandler {
         instance = new tesseract.TessBaseAPI();
         System.out.println(language);
 
-        initTessDataTrainingPath("src/main/resources/tessdata",language);
+        initTessDataTrainingPath("src/main/resources",language);
 
         image = lept.pixRead(input);
 
